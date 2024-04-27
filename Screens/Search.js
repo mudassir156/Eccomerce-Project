@@ -14,31 +14,28 @@ const Search = () => {
   }, []);
   return (
     <View>
-    <View className='m-4 mt-14 flex-row items-center border border-transparent rounded-3xl p-2 bg-teal-50'>
-      <FontAwesome5 name="camera" size={24} color="black" className="w-6 h-6 ml-2" />
-      <TextInput
-        placeholder="What are you looking for?"
-        className='flex-1 text-base ml-3 ' 
-        selectionColor={'gray'}       
-        onChangeText={text=>setInput(text)}
-      />
-      <TouchableOpacity >
-      <EvilIcons name="search" size={27} color="black" className="w-6 h-6 mr-5" />
-      </TouchableOpacity>
-      
-    </View>
-      {foundUser? 
-      <View>
-        <View style={{flexDirection:'row',backgroundColor:'white',margin:16,borderRadius:15,padding:12,alignItems:'center',marginTop:10}}>
-        <Image source={{ uri: foundUser.img4 }} style={{width:60,height:62,borderRadius:8}} />
-        <View style={{marginHorizontal:12}}>
-        <Text className="font-bold capitalize text-xl" >{foundUser.title}</Text>
-        <Text className="capitalize text-gray-500">{foundUser.description}</Text>
-          <Text className="text-gray-500">{foundUser.price}</Text>
+      <View style={{ margin: 16, marginTop: 40, flexDirection: 'row', alignItems: 'center', borderRadius: 24, padding: 8, backgroundColor: '#E6FFFA' }}>
+        <FontAwesome5 name="camera" size={24} color="black" style={{ width: 24, height: 24, marginLeft: 8 }} />
+        <TextInput
+          placeholder="What are you looking for?"
+          style={{ flex: 1, fontSize: 16, marginLeft: 8 }}
+          selectionColor={'gray'}
+          onChangeText={(text) => setInput(text)}
+        />
+        <TouchableOpacity onPress={() => {}}>
+          <EvilIcons name="search" size={27} color="black" style={{ width: 27, height: 27, marginRight: 8 }} />
+        </TouchableOpacity>
+      </View>
+      {foundUser ? (
+        <View style={{ flexDirection: 'row', backgroundColor: 'white', margin: 16, borderRadius: 15, padding: 12, alignItems: 'center', marginTop: 10 }}>
+          <Image source={{ uri: foundUser.img4 }} style={{ width: 60, height: 62, borderRadius: 8 }} />
+          <View style={{ marginHorizontal: 12 }}>
+            <Text style={{ fontWeight: 'bold', textTransform: 'capitalize', fontSize: 20 }}>{foundUser.title}</Text>
+            <Text style={{ textTransform: 'capitalize', color: '#A0AEC0' }}>{foundUser.description}</Text>
+            <Text style={{ color: '#A0AEC0' }}>{foundUser.price}</Text>
           </View>
-          </View>
-         </View>
-      :null}
+        </View>
+      ) : null}
     </View>
   )
 }

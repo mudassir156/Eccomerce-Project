@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "943182166305",
+    "project_id": "eccomerce-c1f1a",
+    "storage_bucket": "eccomerce-c1f1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943182166305:android:fac52720fc7a47914a6660",
+        "android_client_info": {
+          "package_name": "com.mudassir786.RestaurantApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDux2n7i2gcb0T1PB-OkCLJm2muibo0BQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

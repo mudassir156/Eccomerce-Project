@@ -42,7 +42,7 @@ const navigation=useNavigation()
         keyExtractor={(item) => item.id.toString()}
         renderItem={(item) => renderItem({ ...item, navigation })}
         numColumns={numColumns}
-        contentContainerStyle={{ flexDirection: 'column' }}
+        contentContainerStyle={{ flexDirection: 'column',left:5 }}
       />
     </SafeAreaView>
   );
